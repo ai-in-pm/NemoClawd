@@ -2,7 +2,24 @@
   <img src="./nemoclawd-icons/nemoclawd-logo.windows/icon_256x256.png" alt="NemoClawd Logo" />
 </p>
 
-# NemoClawd
+<h1 align="center">NemoClawd</h1>
+
+<p align="center">
+  <a href="https://github.com/ai-in-pm/NemoClawd/stargazers"><img src="https://img.shields.io/github/stars/ai-in-pm/NemoClawd?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ai-in-pm/NemoClawd/network/members"><img src="https://img.shields.io/github/forks/ai-in-pm/NemoClawd?style=social" alt="GitHub Forks"/></a>
+  <a href="https://github.com/ai-in-pm/NemoClawd/releases/tag/v1.0.0"><img src="https://img.shields.io/github/v/release/ai-in-pm/NemoClawd?color=blue&label=release" alt="Release"/></a>
+  <a href="https://github.com/ai-in-pm/NemoClawd/packages"><img src="https://img.shields.io/badge/npm-%40ai--in--pm%2Fnemoclawd-blue?logo=npm" alt="npm package"/></a>
+  <a href="https://github.com/ai-in-pm/NemoClawd/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"/></a>
+  <a href="https://github.com/ai-in-pm/NemoClawd/discussions"><img src="https://img.shields.io/github/discussions/ai-in-pm/NemoClawd?color=purple" alt="Discussions"/></a>
+</p>
+
+<p align="center">
+  <a href="https://nemoclawd.me">🌐 Website</a> •
+  <a href="https://github.com/ai-in-pm/NemoClawd/wiki">📖 Wiki</a> •
+  <a href="https://github.com/ai-in-pm/NemoClawd/releases">🏷️ Releases</a> •
+  <a href="https://github.com/ai-in-pm/NemoClawd/discussions">💬 Discussions</a> •
+  <a href="https://github.com/ai-in-pm/NemoClawd/issues">🐛 Issues</a>
+</p>
 
 **What if the original ClawdBot and NVIDIA NeMo got together and had a baby?**
 
