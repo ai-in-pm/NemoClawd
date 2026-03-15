@@ -1,4 +1,4 @@
-<p style="text-align: center;">
+<p align="center">
   <img src="./nemoclawd-icons/nemoclawd-logo.windows/icon_256x256.png" alt="NemoClawd Logo" />
 </p>
 
