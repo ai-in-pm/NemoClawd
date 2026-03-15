@@ -1,0 +1,2 @@
+[console_scripts]
+nemoclawd-bridge = nemoclawd_bridge.__main__:main

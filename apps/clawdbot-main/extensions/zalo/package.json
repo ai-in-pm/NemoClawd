@@ -1,0 +1,14 @@
+{
+  "name": "@clawdbot/zalo",
+  "version": "2026.1.17-1",
+  "type": "module",
+  "description": "Clawdbot Zalo channel plugin",
+  "clawdbot": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "dependencies": {
+    "undici": "7.18.2"
+  }
+}

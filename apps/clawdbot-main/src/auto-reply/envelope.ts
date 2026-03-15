@@ -1,0 +1,95 @@
+import { normalizeChatType } from "../channels/chat-type.js";
+import { resolveSenderLabel, type SenderLabelParams } from "../channels/sender-label.js";
+
+export type AgentEnvelopeParams = {
+  channel: string;
+  from?: string;
+  timestamp?: number | Date;
+  host?: string;
+  ip?: string;
+  body: string;
+};
+
+function formatTimestamp(ts?: number | Date): string | undefined {
+  if (!ts) return undefined;
+  const date = ts instanceof Date ? ts : new Date(ts);
+  if (Number.isNaN(date.getTime())) return undefined;
+
+  const yyyy = String(date.getUTCFullYear()).padStart(4, "0");
+  const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const dd = String(date.getUTCDate()).padStart(2, "0");
+  const hh = String(date.getUTCHours()).padStart(2, "0");
+  const min = String(date.getUTCMinutes()).padStart(2, "0");
+
+  // Compact ISO-like UTC timestamp with minutes precision.
+  // Example: 2025-01-02T03:04Z
+  return `${yyyy}-${mm}-${dd}T${hh}:${min}Z`;
+}
+
+export function formatAgentEnvelope(params: AgentEnvelopeParams): string {
+  const channel = params.channel?.trim() || "Channel";
+  const parts: string[] = [channel];
+  if (params.from?.trim()) parts.push(params.from.trim());
+  if (params.host?.trim()) parts.push(params.host.trim());
+  if (params.ip?.trim()) parts.push(params.ip.trim());
+  const ts = formatTimestamp(params.timestamp);
+  if (ts) parts.push(ts);
+  const header = `[${parts.join(" ")}]`;
+  return `${header} ${params.body}`;
+}
+
+export function formatInboundEnvelope(params: {
+  channel: string;
+  from: string;
+  body: string;
+  timestamp?: number | Date;
+  chatType?: string;
+  senderLabel?: string;
+  sender?: SenderLabelParams;
+}): string {
+  const chatType = normalizeChatType(params.chatType);
+  const isDirect = !chatType || chatType === "direct";
+  const resolvedSender = params.senderLabel?.trim() || resolveSenderLabel(params.sender ?? {});
+  const body = !isDirect && resolvedSender ? `${resolvedSender}: ${params.body}` : params.body;
+  return formatAgentEnvelope({
+    channel: params.channel,
+    from: params.from,
+    timestamp: params.timestamp,
+    body,
+  });
+}
+
+export function formatInboundFromLabel(params: {
+  isGroup: boolean;
+  groupLabel?: string;
+  groupId?: string;
+  directLabel: string;
+  directId?: string;
+  groupFallback?: string;
+}): string {
+  // Keep envelope headers compact: group labels include id, DMs only add id when it differs.
+  if (params.isGroup) {
+    const label = params.groupLabel?.trim() || params.groupFallback || "Group";
+    const id = params.groupId?.trim();
+    return id ? `${label} id:${id}` : label;
+  }
+
+  const directLabel = params.directLabel.trim();
+  const directId = params.directId?.trim();
+  if (!directId || directId === directLabel) return directLabel;
+  return `${directLabel} id:${directId}`;
+}
+
+export function formatThreadStarterEnvelope(params: {
+  channel: string;
+  author?: string;
+  timestamp?: number | Date;
+  body: string;
+}): string {
+  return formatAgentEnvelope({
+    channel: params.channel,
+    from: params.author,
+    timestamp: params.timestamp,
+    body: params.body,
+  });
+}

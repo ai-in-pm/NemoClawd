@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+python_src/nemoclawd_bridge/__init__.py
+python_src/nemoclawd_bridge/__main__.py
+python_src/nemoclawd_bridge.egg-info/PKG-INFO
+python_src/nemoclawd_bridge.egg-info/SOURCES.txt
+python_src/nemoclawd_bridge.egg-info/dependency_links.txt
+python_src/nemoclawd_bridge.egg-info/entry_points.txt
+python_src/nemoclawd_bridge.egg-info/top_level.txt

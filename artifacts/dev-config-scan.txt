@@ -1,0 +1,5 @@
+ROOT:C:\Users\djjme\.clawdbot
+C:\Users\djjme\.clawdbot\clawdbot.json
+C:\Users\djjme\.clawdbot\clawdbot.json.pre-llama.bak
+C:\Users\djjme\.clawdbot\agents\main\agent\models.json
+C:\Users\djjme\.clawdbot\agents\main\sessions\sessions.json

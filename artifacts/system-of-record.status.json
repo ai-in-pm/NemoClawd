@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "checkedAt": "2026-03-15T13:47:37.313Z",
+  "errors": [],
+  "warnings": [],
+  "summary": [
+    "README validated at E:\\AIEnv_Adam\\AIEnv\\Storage_of_Programs\\NemoClawd\\NemoClawd-integrated\\README.md",
+    "canvas validated at C:/Users/djjme/clawd/canvas/index.html",
+    "clawdbotConfig validated at C:/Users/djjme/.clawdbot/clawdbot.json"
+  ]
+}

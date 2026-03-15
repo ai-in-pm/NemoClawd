@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemoclawd-bridge"
+version = "0.1.0"
+description = "Python bridge helpers for integrating Clawdbot with NVIDIA NeMo Agent Toolkit"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+authors = [{ name = "NemoClawd" }]
+dependencies = []
+
+[project.scripts]
+nemoclawd-bridge = "nemoclawd_bridge.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "python_src"}
+
+[tool.setuptools.packages.find]
+where = ["python_src"]

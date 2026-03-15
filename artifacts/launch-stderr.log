@@ -1,0 +1,17 @@
+2026-03-15T13:19:31.039Z [bonjour] bridge name conflict resolved; newName="DESKTOP-9QGI5UD (Clawdbot) (3)"
+2026-03-15T13:19:31.132Z [bonjour] bridge hostname conflict resolved; newHostname="DESKTOP-9QGI5UD-(3)"
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-15.md'
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-14.md'
+[tools] exec failed: out-file : Could not find a part of the path 'C:\dev\null'.
+At line:1 char:1
++ find memory/projects -type f -name "*.md" 2>/dev/null | head -20
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], DirectoryNotFoundException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+Command exited with code 1
+[tools] exec failed: Command exited with code 1
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-15.md'
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-15.md'
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-15.md'
+[tools] read failed: ENOENT: no such file or directory, access 'C:\Users\djjme\clawd\memory\2026-03-14.md'

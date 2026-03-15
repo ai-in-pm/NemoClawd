@@ -1,0 +1,8 @@
+﻿Remove-Item : Cannot find path 'E:\AIEnv_Adam\AIEnv\Storage_of_Programs\NemoClawd\clawdbot-main' because it does not exist.
+At line:1 char:287
++ ... tion 'E:\'; Remove-Item -LiteralPath $target -Recurse -Force -ErrorAc ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (E:\AIEnv_Adam\A...d\clawdbot-main:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+ 
+

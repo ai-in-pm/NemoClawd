@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-03-15T12:30:52.292Z",
+  "typescriptBridgeDist": "dist",
+  "clawdbotDist": "apps/clawdbot-main/dist",
+  "pythonBridgeBuilds": "artifacts/python-bridge",
+  "nemoPythonBuilds": [
+    "artifacts\\python-nemo-source\\nvidia_nat-0.0.0-py3-none-any.whl",
+    "artifacts\\python-nemo-source\\nvidia_nat-0.0.0.tar.gz"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "NemoClawd",
+  "identity": {
+    "assistantName": "NemoClawd",
+    "sessionKey": "nemoclawd-main"
+  },
+  "runtime": {
+    "gatewayPort": 19001
+  },
+  "policies": {
+    "selfAware": {
+      "circadianGuard": true,
+      "jobKinds": [
+        "text-based",
+        "purpose-driven"
+      ]
+    }
+  },
+  "sources": {
+    "readme": "README.md",
+    "canvas": "C:/Users/djjme/clawd/canvas/index.html",
+    "clawdbotConfig": "C:/Users/djjme/.clawdbot/clawdbot.json"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "nemoclawd-integrated",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified orchestrator for Clawdbot and NVIDIA NeMo Agent Toolkit",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:node": "node ./scripts/build-node.mjs",
+    "bootstrap:python": "node ./scripts/bootstrap-python.mjs",
+    "build:python": "node ./scripts/build-python.mjs",
+    "artifacts:collect": "node ./scripts/collect-artifacts.mjs",
+    "build:all": "pnpm run build && pnpm run build:node && pnpm run bootstrap:python && pnpm run build:python && pnpm run artifacts:collect",
+    "smoke:test": "pnpm run build && pnpm run bootstrap:python && node ./scripts/smoke-test.mjs",
+    "sor:verify": "node ./scripts/verify-system-of-record.mjs",
+    "sor:status": "pnpm run sor:verify && node -e \"const fs=require('fs');console.log(fs.readFileSync('./artifacts/system-of-record.status.json','utf8'));\"",
+    "start:clawdbot": "pnpm run sor:verify && node ./scripts/run-clawdbot-with-nemo.mjs",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up nemoclawd"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.6",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.23.0"
+}

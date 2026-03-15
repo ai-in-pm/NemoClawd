@@ -1,0 +1,12 @@
+services:
+  nemoclawd:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: nemoclawd:local
+    environment:
+      NEMOCLAWD_ROOT_DIR: /opt/nemoclawd
+      NEMOCLAWD_NAT_PYTHON: /opt/nemoclawd/apps/NeMo-Agent-Toolkit-develop/.venv/bin/python
+      NEMOCLAWD_NAT_WORKDIR: /opt/nemoclawd/apps/NeMo-Agent-Toolkit-develop
+    stdin_open: true
+    tty: true
