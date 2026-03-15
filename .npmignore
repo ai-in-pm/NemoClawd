@@ -1,0 +1,18 @@
+# Lock/permission-denied files
+artifacts/python-bridge/
+artifacts/python-nemo-source/
+
+# Heavy dirs not needed in the package
+apps/
+node_modules/
+build/
+dist/
+docker/
+.git/
+.idea/
+
+# Artifacts & logs
+artifacts/*.log
+artifacts/*.pid
+artifacts/*.txt
+artifacts/*.json

@@ -1,8 +1,10 @@
 {
-  "name": "nemoclawd-integrated",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ai-in-pm/nemoclawd",
+  "version": "1.0.0",
   "description": "Unified orchestrator for Clawdbot and NVIDIA NeMo Agent Toolkit",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
